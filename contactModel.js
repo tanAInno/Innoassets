@@ -3,6 +3,7 @@ var mongoose = require('mongoose');
 var contactSchema = mongoose.Schema({
     name: {
         type: String,
+        default: '',
         required: true
     },
     image: String,
@@ -10,11 +11,42 @@ var contactSchema = mongoose.Schema({
         type: String,
         required: true
     },
-    position: String,
-    department: String,
-    status: String,
-    phone: String,
-    Email: String,
+    position: { 
+        type: String,
+        default: ''
+    },
+    department: { 
+        type: String,
+        default: ''
+    },
+    status: { 
+        type: String,
+        default: ''
+    },
+    phone: { 
+        type: String,
+        default: ''
+    },
+    email: { 
+        type: String,
+        default: ''
+    },
+    last_edited: { 
+        type: String,
+        default: ''
+    },
+    assets: { 
+        type: String,
+        default: ''
+    },
+    wifi_password: { 
+        type: String,
+        default: ''
+    },
+    printer_password: { 
+        type: String,
+        default: ''
+    },
     create_date: {
         type: Date,
         default: Date.now

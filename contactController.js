@@ -27,6 +27,10 @@ exports.new = function (req, res) {
     contact.status = req.body.status;
     contact.phone = req.body.phone;
     contact.email = req.body.email;
+    contact.last_edited = req.body.last_edited;
+    contact.wifi_password = req.body.wifi_password;
+    contact.assets = req.body.assets;
+    contact.printer_password = req.body.printer_password;
 // save the contact and check for errors
     contact.save(function (err) {
         // if (err)
@@ -61,6 +65,10 @@ contact.name = req.body.name ? req.body.name : contact.name;
         contact.status = req.body.status;
         contact.phone = req.body.phone;
         contact.email = req.body.email;
+        contact.last_edited = req.body.last_edited;
+        contact.wifi_password = req.body.wifi_password;
+        contact.assets = req.body.assets;
+        contact.printer_password = req.body.printer_password;
 // save the contact and check for errors
         contact.save(function (err) {
             if (err)
