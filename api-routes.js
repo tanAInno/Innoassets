@@ -8,7 +8,8 @@ router.get('/', function (req, res) {
     });
 });
 // Import contact controller
-var contactController = require('./contactController');
+var contactController = require('./controller/contactController');
+var loginController = require('./controller/loginController');
 // Contact routes
 router.route('/contacts')
     .get(contactController.index)
@@ -20,5 +21,7 @@ router.route('/contacts/:contact_id')
     .delete(contactController.delete);
 router.route('/contacts/reset/all')
     .delete(contactController.deleteAll);
+router.route('/login')
+    .post(loginController.login);
 // Export API routes
 module.exports = router;
