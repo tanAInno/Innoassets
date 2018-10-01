@@ -20,7 +20,7 @@ app.use(cors());
 mongoose.connect('mongodb://localhost/resthub');
 var db = mongoose.connection;
 // Setup server port
-var port = process.env.PORT || 8000;
+var port = process.env.PORT || 7000;
 // Send message for default URL
 app.get('/', (req, res) => res.send('Hello World with Express'));
 // Use Api routes in the App

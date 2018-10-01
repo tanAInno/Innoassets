@@ -7,20 +7,18 @@ router.get('/', function (req, res) {
        message: 'Welcome to RESTHub crafted with love!',
     });
 });
-// Import contact controller
-var contactController = require('./controller/contactController');
+// Import asset controller
+var assetController = require('./controller/assetController');
 var loginController = require('./controller/loginController');
-// Contact routes
-router.route('/contacts')
-    .get(contactController.index)
-    .post(contactController.new);
-router.route('/contacts/:contact_id')
-    .get(contactController.view)
-    .patch(contactController.update)
-    .put(contactController.update)
-    .delete(contactController.delete);
-router.route('/contacts/reset/all')
-    .delete(contactController.deleteAll);
+// Asset routes
+router.route('/assets')
+    .get(assetController.index)
+    .post(assetController.new);
+router.route('/assets/:asset_id')
+    .get(assetController.view)
+    .patch(assetController.update)
+    .put(assetController.update)
+    .delete(assetController.delete);
 router.route('/login')
     .post(loginController.login);
 // Export API routes
