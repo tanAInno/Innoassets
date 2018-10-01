@@ -17,7 +17,7 @@ app.use(bodyParser.urlencoded({
 app.use(bodyParser.json());
 app.use(cors());
 // Connect to Mongoose and set connection variable
-mongoose.connect('mongodb://localhost/resthub');
+mongoose.connect('mongodb://localhost/assetdb',{ useNewUrlParser: true });
 var db = mongoose.connection;
 // Setup server port
 var port = process.env.PORT || 7000;
