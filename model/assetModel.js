@@ -30,6 +30,26 @@ var assetSchema = mongoose.Schema({
         type: String,
         default: ''
     },
+    serial: {
+        type: String,
+        default: ''
+    },
+    processor: {
+        type: String,
+        default: ''
+    },
+    mac_wifi: {
+        type: String,
+        default: ''
+    },
+    mac_lan: {
+        type: String,
+        default: ''
+    },
+    warranty: {
+        type: String,
+        default: ''
+    },
     programs: { 
         type: String,
         default: ''

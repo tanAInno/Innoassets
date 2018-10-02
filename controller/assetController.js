@@ -27,6 +27,11 @@ exports.new = function (req, res) {
     asset.ram = req.body.ram;
     asset.harddisk = req.body.harddisk;
     asset.programs = req.body.programs;
+    asset.serial = req.body.serial;
+    asset.processor = req.body.processor;
+    asset.mac_wifi = req.body.mac_wifi;
+    asset.mac_lan = req.body.mac_lan;
+    asset.warranty = req.body.warranty;
 // save the asset and check for errors
     asset.save(function (err) {
         // if (err)
@@ -61,6 +66,11 @@ exports.update = function (req, res) {
         asset.ram = req.body.ram;
         asset.harddisk = req.body.harddisk;
         asset.programs = req.body.programs;
+        asset.serial = req.body.serial;
+        asset.processor = req.body.processor;
+        asset.mac_wifi = req.body.mac_wifi;
+        asset.mac_lan = req.body.mac_lan;
+        asset.warranty = req.body.warranty;
 // save the asset and check for errors
         asset.save(function (err) {
             if (err)
