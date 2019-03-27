@@ -3,8 +3,7 @@ var mongoose = require('mongoose');
 var assetSchema = mongoose.Schema({
     name: {
         type: String,
-        default: '',
-        required: true
+        default: ''
     },
     os: { 
         type: String,
@@ -27,8 +26,8 @@ var assetSchema = mongoose.Schema({
         default: ''
     },
     harddisk: { 
-        type: String,
-        default: ''
+        type: Array,
+        default: []
     },
     serial: {
         type: String,
@@ -50,9 +49,21 @@ var assetSchema = mongoose.Schema({
         type: String,
         default: ''
     },
-    programs: { 
+    service_tag: {
         type: String,
         default: ''
+    },
+    email: {
+        type: String,
+        default: ''
+    },
+    department: {
+        type: String,
+        default: ''
+    },
+    programs: { 
+        type: Array,
+        default: []
     }
 });
 // Export asset model

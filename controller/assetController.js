@@ -19,7 +19,7 @@ exports.index = function (req, res) {
 // Handle create asset actions
 exports.new = function (req, res) {
     var asset = new Asset();
-    asset.name = req.body.name ? req.body.name : asset.name;
+    asset.name = req.body.name;
     asset.os = req.body.os;
     asset.status = req.body.status;
     asset.loaner = req.body.loaner;
@@ -32,6 +32,9 @@ exports.new = function (req, res) {
     asset.mac_wifi = req.body.mac_wifi;
     asset.mac_lan = req.body.mac_lan;
     asset.warranty = req.body.warranty;
+    asset.service_tag = req.body.service_tag;
+    asset.email = req.body.email;
+    asset.department = req.body.department;
 // save the asset and check for errors
     asset.save(function (err) {
         // if (err)
@@ -58,7 +61,7 @@ exports.update = function (req, res) {
     Asset.findById(req.params.asset_id, function (err, asset) {
         if (err)
             res.send(err);
-        asset.name = req.body.name ? req.body.name : asset.name;
+        asset.name = req.body.name;
         asset.os = req.body.os;
         asset.status = req.body.status;
         asset.loaner = req.body.loaner;
@@ -71,6 +74,9 @@ exports.update = function (req, res) {
         asset.mac_wifi = req.body.mac_wifi;
         asset.mac_lan = req.body.mac_lan;
         asset.warranty = req.body.warranty;
+        asset.service_tag = req.body.service_tag;
+        asset.email = req.body.email;
+        asset.department = req.body.department;
 // save the asset and check for errors
         asset.save(function (err) {
             if (err)
